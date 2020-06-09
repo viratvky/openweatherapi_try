@@ -1,0 +1,15 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="TRACY,CA"></Label>
+</ActionBar>
+
+<GridLayout class="page">
+    <ListView [items]="weather" class="list-group">
+        <ng-template let-forecast="item">
+            <GridLayout class="list-group-item" rows="auto, auto" columns="50,*">
+                <Image [src]="forecast.iconLink" rowSpan="2" row="0" col="0"></Image>
+                <Label text="{{forecast.highTemperature }}" row="0" col="1"></Label>
+                <Label text="{{forecast.utcTime}}" row='1' col="1"></Label>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>
